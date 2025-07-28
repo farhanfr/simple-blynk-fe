@@ -11,7 +11,7 @@ function App() {
     setIsLoading(true)
     setApiResult(null)
     try {
-      const response = await axios.get(import.meta.env.VITE_API_BASE_URL)
+      const response = await axios.get("https://simple-blynk-fe.vercel.app/api/send-to-sheet")
       console.log(response.data)
       setApiResult(response.data.data)
     } catch (error) {
